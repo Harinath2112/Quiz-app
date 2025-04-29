@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="quiz-container">
+    <!-- User Name Input -->
+    <div id="username-container">
+      <h1>Enter your name:</h1>
+      <input type="text" id="username" placeholder="Your Name" />
+      <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Content -->
+    <div id="quiz-content" style="display:none;">
+      <h1>Simple Quiz</h1>
+
+      <!-- Display the current question number -->
+      <div id="question-number-container">
+        <span id="question-number">Question 1</span>
+      </div>
+
+      <div id="question">Question text will go here</div>
+
+      <div class="options">
+        <button class="option-btn" onclick="selectOption(this)">Option 1</button>
+        <button class="option-btn" onclick="selectOption(this)">Option 2</button>
+        <button class="option-btn" onclick="selectOption(this)">Option 3</button>
+        <button class="option-btn" onclick="selectOption(this)">Option 4</button>
+      </div>
+
+      <!-- Submit button for each question -->
+      <button id="submit-btn" onclick="submitAnswer()" style="display:none;">Submit Answer</button>
+
+      <!-- Next button after answering -->
+      <button id="next-btn" onclick="nextQuestion()" style="display:none;">Next</button>
+
+      <div id="score-container" style="display:none;">
+        <h2>Your Score: <span id="score"></span></h2>
+        <button id="restart-btn" onclick="restartQuiz()">Restart Quiz</button>
+      </div>
+    </div>
+    
+    <div id="timer">Time Left: 15s</div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
